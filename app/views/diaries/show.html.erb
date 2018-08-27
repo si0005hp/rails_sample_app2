@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>ID:</strong>
+  <%= @diary.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @diary.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @diary.body %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @diary.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @diary.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_diary_path(@diary) %> |
+<%= link_to 'Delete', @diary, method: :delete, data: {confirm: 'Are you sure to delete?'} %> |
+<%= link_to 'Back', diaries_path %>
